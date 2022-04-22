@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{width: 200px;height: 200px;margin-top: 10px;box-sizing: border-box;background-color: paleturquoise;}
+    </style>
+</head>
+<body>
+    属性名: <input type="text" class="inp1" value="background"> <br>
+    属性值: <input type="text" class="inp2" value="pink"> <br>
+    <button class="btn1">确认</button>
+    <button class="btn2">重置</button> <br>
+    <div>输入属性,属性值 点击确认查看结果</div>    
+</body>
+
+<script>
+    // 获取事件源
+    var inp=document.querySelectorAll("input")
+    var btn1=document.querySelector(".btn1")
+    var btn2=document.querySelector(".btn2")
+    var div=document.querySelector("div")
+
+    btn1.onclick=function(){
+        div.style[inp[0].value]=inp[1].value
+        console.log(inp[0])
+    }
+    btn2.onclick=function(){
+        div.removeAttribute("style")
+    }
+</script>
+</html>
+
